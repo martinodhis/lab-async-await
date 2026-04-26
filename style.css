@@ -1,0 +1,47 @@
+/* Basic page setup */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1877f2; /* Flatbook blue */
+  margin-bottom: 30px;
+}
+
+/* Remove default bullet points from the list */
+#post-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Make each post look like a card */
+li {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Post title styling */
+h1 {
+  font-size: 1.25rem;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+/* Post body styling */
+p {
+  margin: 0;
+  color: #555;
+  line-height: 1.5;
+  white-space: pre-line; /* This makes sure the \n newlines from the API show up correctly */
+}

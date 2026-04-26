@@ -1,11 +1,20 @@
 async function fetchPosts() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const posts = await response.json();
-  displayPosts(posts);
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const posts = await response.json();
+    displayPosts(posts);
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+  }
 }
 
 function displayPosts(posts) {
   const postList = document.querySelector("#post-list");
+  if (!postList) return;
+
   posts.forEach((post) => {
     const li = document.createElement("li");
     const h1 = document.createElement("h1");
